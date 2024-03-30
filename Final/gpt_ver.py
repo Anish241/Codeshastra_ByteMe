@@ -40,10 +40,8 @@ def get_hand_image(image):
 
 
 def get_pred(sequence):
-
-    labels = ['Correct','Incorrect']
-    pred = np.argmax(best_model.predict(np.array(sequence).reshape((1,np.array(sequence).shape[0],np.array(sequence).shape[1],np.array(sequence).shape[2],np.array(sequence).shape[3]))), axis=1)
-    # for frame in sequence
+    labels = ['Correct', 'Incorrect']
+    pred = np.argmax(best_model.predict(np.array(sequence).reshape((1, len(sequence), 64, 64, 3))), axis=1)
     print(labels[pred[0]])
     return sequence[1:], labels[pred[0]]
 
@@ -62,21 +60,26 @@ def main():
     sequence = []
     while True:
 
+        print(len(sequence))
         ret, frame = vid.read()
         hand_box = get_hand_image(frame)
 
-        pred = "" 
-        if(len(sequence) < 20 ):
-            if(hand_box is not None):
-                sequence.append(hand_box)
-        else:
-            sequence,pred = get_pred(sequence)
+        pred = ""
+        if len(sequence) >= 20:
+            sequence, pred = get_pred(sequence)
+
+        if hand_box is not None:
+            sequence.append(hand_box)
+        
+
         write_text_on_frame(frame, str(pred), position=(50, 50), font_scale=1, color=(255, 255, 255), thickness=2)
 
         # Display output in OpenCV window
-        cv2.imshow('Output', cv2.flip(frame,1))
-        if(hand_box is not None):
-            sequence.append(hand_box)
+        cv2.imshow('Output', frame)
+
+        # if(hand_box is not None):
+        #     sequence.append(hand_box)
+
         # Check for 'q' key to quit
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
