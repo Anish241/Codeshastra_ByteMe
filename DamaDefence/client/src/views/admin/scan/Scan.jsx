@@ -2,7 +2,9 @@ import React from 'react'
 
 const Scan = () => {
   return (
-    <div>Scan</div>
+    <div>
+      <img src="http://localhost:5000/video" alt="video stream" />
+    </div>
   )
 }
 
