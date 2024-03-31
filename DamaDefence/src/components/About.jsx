@@ -7,22 +7,13 @@ const About = () => {
       <div className=" w-full lg:w-3/4 space-y-4">
         <h1 className=" text-4xl font-semibold text-center lg:text-start">About Us</h1>
         <p className=" text-justify lg:text-start">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-          labore rerum tempore tenetur commodi natus quos itaque voluptatum
-          repudiandae nostrum accusantium vero voluptate aspernatur totam,
-          laboriosam aut, et quae consequatur?
+        Our focus is on developing advanced systems for detecting asthma pump position and providing real-time feedback to users. By employing state-of-the-art algorithms and machine learning techniques, we have created a platform capable of accurately assessing the positioning of asthma inhalers and providing actionable insights to users.
         </p>
         <p className="text-justify lg:text-start">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quia
-          suscipit illum, numquam incidunt nostrum dolor officia doloremque
-          cupiditate, placeat explicabo sed iure atque neque quidem ipsam!
-          Dolor, minus reiciendis.
+        Using a combination of computer vision, sensor data, and artificial intelligence, our system analyzes the user's inhaler technique in real-time. It detects subtle movements and positions, ensuring that the medication is administered effectively. Additionally, our platform provides personalized feedback and guidance to help users optimize their inhaler usage and improve asthma management.
         </p>
         <p className="text-justify lg:text-start">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, illum.
-          Accusantium ab expedita veniam nobis aut, in rerum repellendus!
-          Exercitationem libero recusandae corrupti accusantium reiciendis in
-          placeat illo maxime ea.
+        We are excited about the potential of our technology to transform asthma care, and we welcome collaboration and feedback from the community. Whether you're a healthcare provider, a researcher, or someone living with asthma, we invite you to join us on this journey toward better asthma management.
         </p>
       </div>
       <div className=" w-full lg:w-3/4">
