@@ -1,0 +1,1 @@
+start cmd /k "conda activate ml && python main.py"
