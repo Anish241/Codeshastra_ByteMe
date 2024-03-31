@@ -16,3 +16,6 @@ Posture_Model.h5
 Dataset2
 anishDataset.pkl
 retrain_best_model.h5
+30frameDataset.pkl
+30frameDatasetLargeRect.pkl
+__pycache__
