@@ -139,7 +139,7 @@ with mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5) a
                                 
                                 # Calculate wrist and finger angles only if distance is between 100 to 150 pixels
                                 if  distance <= 250:
-                                    cv2.putText(image, f"Distance: 👍", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+                                    cv2.putText(image, f"Distance: OK", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
                                     # Check if wrist is straight with vertical
                                     wrist = hand_landmarks.landmark[mp_hands.HandLandmark.WRIST]
                                     middle_finger_tip = hand_landmarks.landmark[mp_hands.HandLandmark.MIDDLE_FINGER_TIP]
@@ -216,7 +216,7 @@ cv2.destroyAllWindows()
 # plot the shaking frequency over time
 plt.plot(freqs)
 plt.xlabel("Time (s)")
-plt.ylabel("Shaking Frequency")
-plt.title("Shaking Frequency over time")
+plt.ylabel("Total Shakes")
+plt.title("Total Shakes over time")
 plt.show()
 

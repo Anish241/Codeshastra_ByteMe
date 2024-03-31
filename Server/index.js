@@ -10,9 +10,10 @@ app.use(express.json());
 app.use(cors())
 
 app.get("/", (req, res) => {
-    const command = "conda activate ml && python main.py"
-    const script = `start cmd /k "${command}"`
-    fs.writeFileSync("runScripts.bat",script)
+    // const command = "conda activate ml && python main.py"
+    // const script = `start cmd /k "${command}"`
+    // fs.writeFileSync("runScripts.bat",script)
+    
     open('runScripts.bat',{wait:false})
 });
 
